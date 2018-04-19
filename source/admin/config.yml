@@ -1,6 +1,4 @@
 backend:
   name: git-gateway
+  repo: patrickbolle/ca-test-site
   branch: master # Branch to update (optional; defaults to master)
-
-media_folder: "source/assets/images" # Folder where user uploaded files should go
-public_folder: "source"
