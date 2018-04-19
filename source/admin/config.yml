@@ -8,7 +8,7 @@ public_folder: "source"
 collections: # A list of collections the CMS should be able to edit
     - label: "Blog"
       name: "blog"
-      folder: "_posts/blog"
+      folder: "_posts"
       create: true
       fields:
       - {label: "Title", name: "title", widget: "string"}
