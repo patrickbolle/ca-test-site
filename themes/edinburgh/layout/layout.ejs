@@ -2,7 +2,7 @@
 <html lang="en">
   <!-- Head tag -->
   <%- partial('_partial/head') %>
-
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <body>
   	<div class="container-fluid navbar-container m-sm-5">
       <!-- Header -->
@@ -20,5 +20,17 @@
 
     <!-- After footer scripts -->
     <%- partial('_partial/footer') %>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+    
   </body>
 </html>
